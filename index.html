@@ -88,21 +88,30 @@
 }
 }
 
-@media (min-width: 1100px){
-.hamburger {
-  content-visibility: hidden;
-}
-nav {
-  content-visibility: visible;
-}
-}
 
 @media (max-width: 1099px){
+.hamburger {
+  visibility: visible;
+}
 nav {
   content-visibility: hidden;
+}
+.burger-menu-home {
+  visibility: hidden;
 }
 .svg {
   margin-top: 20px;
+}
+}
+@media (min-width: 1100px){
+nav {
+  content-visibility: visible;
+}
+.burger-menu-home {
+  visibility: hidden;
+}
+.hamburger {
+  visibility: hidden;
 }
 }
 
@@ -114,7 +123,7 @@ nav {
 
     <!-- new hamburger menu test ***************  -->
 
-    <div class="burger-menu">
+    <div class="burger-menu-home">
       <ul class="menu">
         <li><a class="menuItem" href="index.html">Home</a></li>
         <li><a class="menuItem" href="#">About</a></li>
