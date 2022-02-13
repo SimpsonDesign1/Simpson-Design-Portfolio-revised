@@ -1,0 +1,423 @@
+/* Brand colors ***************
+
+#AE1746 Rust
+#E9804C Orange
+#81893C Green
+#C7BE4C Lime
+#AED3CA Blue
+#2D2F30 Black
+#878C91 Gray
+#E0E1E5 Light Gray1
+
+************************* */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Is this the correct CSS code for font awesome? */
+
+/* @font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:block;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands";font-weight:400} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex; /* entire page is parent of header main and footer */
+  min-height: 100vh; /* shortand for 100% vetical height */
+  flex-direction: column;
+  }
+}
+
+
+/* Five possible link states, in order:
+:link -- before you've visited the site
+:visited -- you've viewed the site before
+:focus -- when the element is selected
+:hover -- when you hover over it
+:active -- after the link is clicked, before the next page loads
+
+Remember with the acronym
+Lord Vader Former Handle Anakin
+or
+LiVe Free HAppy
+
+THIS ORDER IS IMPORTANT AND MUST BE OBEYED
+*/
+
+/* use "nav a" as master state for styling type, size and weight */
+
+
+
+header {
+  background-color: black;
+  /* font-size: 1rem; */
+
+/* global styles ****************** */
+
+}
+footer {
+  /* background: gray; */
+  /* font-size: 1.5rem; */
+}
+
+main {
+  display: flex; /* creates new parent container of article and a sidebar */
+  flex-direction: column; /* set up as mobile first so that it's a column layout below 1100px. Might need to tweak this */
+  flex: 1; /* shortand means flex grow is set to grow and will fill up as much of the available space as it can, and flex shrink is set to 1 which means it will shrink proportionally with the window and finally flex basis is set to zero which means there is no starting value for main and will take up available screen size */
+}
+
+/* profile sidebar CSS section **************** */
+
+aside {
+  background: #2D2F30;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.profile-image {
+  margin-top: 60px;
+  /* width: 100px; */
+  /* height: auto; */
+}
+.profile-text {
+  /* padding: 0 30 0; */
+  margin-top: 70px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+.profile-text h1 {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: white;
+}
+.svg {
+  width: 35px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #2D2F30;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+p {
+  font-size: 1em;
+  line-height: 1.3em;
+  color: #2D2F30;
+  margin-top: .7em;
+}
+
+/* navigation CSS section **************** */
+
+nav {
+  text-align: center;
+  width: 100%;
+  margin: 100 0 auto;
+  /* border: 1px solid blue; */
+  /* padding: 1rem; */
+}
+nav ul {
+  list-style-type: none; /* gets rid of bullets */
+  /* border: 1px solid #333; */
+  margin: 1rem auto;
+  /* background-color: #eee; */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+nav li {
+  display: inline-block; /* makes the navigation horizontal */
+  padding: 20px 5px;
+  /* text-align: center; */
+  /* border: 1px solid red; */
+}
+nav li:hover {
+  /* color: */
+}
+nav a {
+  text-decoration: none; /* gets rid of navigation underlines */
+  color: white;
+  font-size: .8rem;
+  font-weight: 800;
+}
+nav a:focus {
+  /* background-color: yellow; /* shows mouse on click state */ */
+}
+nav a:hover {
+  color: #ADC440;
+}
+
+/* This is the portfolio hero section. How do i get this to scroll while the sidebar navigation stays in place? */
+
+article.main {
+  background: white;
+  overflow-y: scroll;
+  /* flex: 1; /* setting this overrides the main above and gives the article the command to take up the majority of the vertical container space. normally 2 items set to 1 will divide by 50% each */ */
+  /* flex-direction: column; */
+}
+
+
+
+/* NEW simpler way to style clickable image overlays */
+
+.image1 {
+  position: relative;
+  max-width: 1110px;
+  margin: 20px;
+}
+.image__img {
+  display: block;
+  width: 100%
+}
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.image__title {
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+}
+.image__description {
+    font-size: 1em;
+    margin-top: 0.5em;
+    text-align: center;
+    color: white;
+}
+.image__overlay > * {
+    transition: transform 0.25s;
+}
+.image__overlay a {
+  text-decoration: none;
+  color: white;
+}
+.image__overlay:hover {
+  /* opacity: 1; */
+}
+
+/* UX Case Study Hero */
+
+.container-hero {
+  /* display: grid; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0px 1fr;
+  height: auto;
+  width: 100vw;
+  margin-bottom: 50px;
+}
+.casestudy-hero1 {
+  /* background-color: blue; */
+  /* grid-column-start: 1; */
+  /* grid-column-end: 5; */
+  /* grid-row: 2; */
+  display: block;
+  /* position: relative; */
+  /* max-width: 1400px; */
+  /* height: auto; */
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+.casestudy-section1 {
+  /* background-color: lightblue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "img_left img_left img_left img_left "
+  "img_right img_right img_right img_right";
+  max-width: 80%;
+  /* height: auto; */
+  margin:0 auto;
+  grid-row-gap: 70px;
+}
+
+.hero1 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas:
+  "hamburger-nav hamburger-nav hamburger-nav hamburger-nav"
+  "casestudy-hero casestudy-hero casestudy-hero casestudy-hero"
+  ;
+  width: 100vw;
+  height: 100vh;
+}
+.casestudy-hero {
+  position: relative;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+}
+.casestudy__img {
+  display: block;
+  width: 100%
+}
+.casestudy__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 20px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.casestudy__title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+}
+.casestudy__description {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    text-align: left;
+    color: white;
+}
+.casestudy__overlay > * {
+    transition: transform 0.25s;
+}
+.casestudy__overlay a {
+  text-decoration: none;
+  color: white;
+}
+.casestudy__overlay:hover {
+  /* opacity: 1; */
+}
+
+
+/* ***********************************************
+
+now add in the responsive to desktop rules
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+****************************************************** */
+
+@media (min-width: 320px) {
+  .profile-text {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .profile-text h1 {
+    font-size: 18px;
+    line-height: 1.7rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .profile-text {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .profile-text h1 {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+  aside {
+    padding: 30px;
+  }
+  nav ul {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  nav li {
+    padding: 20px 7px;
+  }
+}
+
+@media (min-width: 1100px) {
+    main {
+      width: 100%; /* makes main container use 80% of the page width - responsive */
+      margin: 0 auto; /*  zero auto centers the container or div */
+      flex-direction: row;
+    }
+    aside {
+      flex: 0 0 35%;
+      /* allows items to take up a third of the available space and not shrink or grow */
+    }
+    .profile-text h1 {
+      font-size: 24px;
+      line-height: 2rem;
+    }
+    .image__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-family: Montserrat, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* padding: 10px; */
+      opacity: 0;
+      transition: opacity 0.25s
+    }
+    .image__title {
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+    }
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 0.5em;
+        text-align: center;
+    }
+    .image__overlay > * {
+        transition: transform 0.25s;
+    }
+    .image__overlay a {
+      text-decoration: none;
+      color: white;
+    }
+    .image__overlay:hover {
+      opacity: 1;
+    }
+}

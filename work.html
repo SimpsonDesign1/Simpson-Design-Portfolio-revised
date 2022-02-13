@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>David Simpson Portfolio Case Study</title>
+  <link rel="stylesheet" href="styles/base.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <style>
+  .casestudy-hero1 {
+  position: relative;
+  max-width: 100%;
+}
+.csimage__img {
+  display: block;
+  width: 100%
+}
+.csimage__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding-left: 50px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.csimage__title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: left;
+}
+.csimage__description {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    text-align: left;
+    color: white;
+}
+.csimage__overlay > * {
+    transition: transform 0.25s;
+}
+.csimage__overlay a {
+  text-decoration: none;
+  color: white;
+}
+.csimage__overlay:hover {
+  /* opacity: 1; */
+}
+.btn_text {
+  margin-top: 2em;
+  padding: 10px 15px 10px 15px;
+  font-size: .75rem;
+  background-color:#2D2F30;
+  font-weight: 500;
+  letter-spacing: .5px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 5px 10px gray;
+}
+.btn_text:hover {
+  background-color:#62676a;
+}
+.btn_text:active {
+  background-color:#81893C;
+  box-shadow: 1px 2px 2px gray;
+}
+.btn_text > a {
+  color: white;
+  text-decoration: none;
+}
+
+.img_left {
+grid-column-start: 1;
+grid-column-end: 5;
+grid-row: 1;
+display: flex;
+justify-content: left;
+align-items: center;
+padding: 20px;
+height: auto;
+}
+.image-left {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px;
+}
+.text-right {
+  width: 50%;
+  margin-left: 20px;
+}
+.img_right {
+grid-column-start: 1;
+grid-column-end: 5;
+grid-row: 2;
+display: flex;
+justify-content: left;
+align-items: center;
+padding: 20px;
+height: auto;
+}
+.image-right {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin-left: 20px;
+}
+.text-left {
+  width: 50%;
+  margin-right: 20px;
+  order: -1;
+}
+.text-left > ul {
+  line-height: 1.25em;
+  margin-left: 20px;
+}
+
+/* new hamburger menu styles - boilerplate ****************/
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 400;
+  z-index: 99;
+  background: #2D2F30;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  list-style: none;
+}
+.menu > ul {
+  text-decoration: none;
+}
+.showMenu {
+  transform: translateY(0);
+}
+.menuItem {
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+.menuItem:hover {
+  color:#ADC440;
+}
+.hamburger {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+  width: 100vw;
+  /* top: 3rem; */
+  /* left: 3rem; */
+  padding-left: 30px;
+  height: 75px;
+  cursor: pointer;
+  background: #2D2F30;
+  /* border-radius: 10px; */
+  border: none;
+}
+.hamburger > h4 {
+  color: white;
+  /* text-shadow: 2px 3px 8px gray; */
+  order: 1;
+}
+.menuIcon {
+  width: 32px;
+}
+.closeIcon {
+  display: none;
+}
+.material-icons {
+  color: white;
+  /* text-shadow: 2px 3px 8px gray; */
+}
+.burger-menu {
+  display: block;
+  position: relative;
+}
+
+/* media breakpoints for work.html page ****************/
+
+@media (max-width: 600px){
+.hamburger {
+  padding: 20px;
+  height: 50px;
+}
+.casestudy-section1 {
+  grid-row-gap: 0px;
+  max-width: 100%;
+}
+.casestudy-hero1 {
+  /* background-color: blue; */
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 2;
+  display: block;
+  /* position: relative; */
+  /* max-width: 1400px; */
+  /* height: auto; */
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.csimage__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 20px;
+  /* opacity: 0; */
+  transition: opacity 0.25s
+}
+.csimage__title {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+.csimage__description {
+    font-size: 1.25em;
+    margin-top: 0em;
+    text-align: center;
+    color: white;
+}
+.img_left {
+  margin-bottom: 30px;
+}
+}
+
+@media (max-width: 1000px){
+.img_left {
+/* grid-column-start: 1; */
+/* grid-column-end: 5; */
+grid-row: 1;
+display: flex;
+flex-direction: column;
+/* justify-content: flex-end; */
+align-items: center;
+padding: 20px;
+height: auto;
+/* margin-bottom: 80px; */
+}
+.image-left {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  margin: 0px;
+}
+.text-right {
+  width: 100%;
+  margin: 0px;
+}
+.img_right {
+/* grid-column-start: 1; */
+/* grid-column-end: 5; */
+grid-row: 2;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+padding: 20px;
+height: auto;
+}
+.image-right {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  order: 1;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+.text-left {
+  width: 100%;
+  margin-right: 0px;
+  order: 2;
+}
+.text-left > ul {
+  line-height: 1.25em;
+  /* margin-left: 20px; */
+}
+}
+</style>
+</head>
+
+<!-- page html content starts here ***************  -->
+
+<body>
+
+  <!-- new hamburger menu test ***************  -->
+
+  <div class="burger-menu">
+    <ul class="menu">
+      <li><a class="menuItem" href="index.html">Home</a></li>
+      <li><a class="menuItem" href="#">About</a></li>
+      <li><a class="menuItem" href="#">Contact</a></li>
+      <li><a class="menuItem" href="#">Resume</a></li>
+    </ul>
+    <button class="hamburger"><H4>MENU</H4>
+      <!-- material icons https://material.io/resources/icons/ -->
+      <i class="menuIcon material-icons">menu</i>
+      <i class="closeIcon material-icons">close</i>
+    </button>
+  </div>
+
+  <!-- Case Study Hero Image and Overlay Text  *************** -->
+  
+  <div class="casestudy-hero1">
+    <img class="csimage__img" src="images/BSP_CS_Covers2.jpg" alt="Image of laptop and mobile devices displaying Bright Side Produce Website">
+    <div class="csimage__overlay">
+      <div class="csimage__title">BrightSide Produce</div>
+      <p class="csimage__description">Website Redesign UX Case Study</p>
+    </div>
+  </div>
+
+<!-- case study materials section starts  *************** -->
+
+<div class="casestudy-section1">
+    <div class="img_left">
+      <img class="image-left" src="images/BSB_Mobile_Progression.png" alt="3 iPhones displaying stages of user interface development">
+      <div class="text-right">
+        <h2>BrightSide Produce Overview</h2>
+        <p>BrightSide Produce is a Twin Cities nonprofit organization that strives to reduce neighborhood food inequities by providing fresh produce through a home subscription delivery service and as a produce distributor for corner stores in underserved neighborhoods. We redesigned their website for a boot camp team project. BrightSide loved our direction and plans to continue working with us toward a published live website.</p>
+        <a href="https://www.figma.com/proto/TpN5RgB4WoCu1Wt3FSOsjo/BSP---Design-Iterations-DS?page-id=54%3A1016&node-id=54%3A1017&viewport=241%2C48%2C0.04&scaling=scale-down&starting-point-node-id=54%3A1017"><button class="btn_text">
+        View Final Desktop Design
+        </button_text></a>
+      </div>
+  </div>
+  <div class="img_right">
+    <img class="image-right" src="images/BSP_OldHomeScreen.png" alt="iMac displaying Bright Side Produce website old home page design">
+    <div class="text-left">
+      <h2>THE PROBLEM</h2>
+      <p>Usability testing found that a clear value proposition and organization mission are hard to find and that large, unbroken blocks of body text, poor navigation icon visibility, a lack of information hierarchy and inconsistent image usage generally made the site difficult to navigate.</p>
+    </br>
+      <h2>THE SOLUTION</h2>
+        <p><ul>
+        <li>Create a responsive navigation and UI design that looks great at all breakpoints</li>
+        <li>Improve donation and product-purchase user flows</li>
+        <li>Highlight BrightSide’s value and mission on the home page</li>
+        <li>Use beautiful, compelling imagery throughout the site</li>
+        </ul></p>
+    </div>
+
+<!-- page content ends here ***************  -->    
+
+  <script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger= document.querySelector(".hamburger");
+    const closeIcon= document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+
+    function toggleMenu() {
+      if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+      } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+      }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
